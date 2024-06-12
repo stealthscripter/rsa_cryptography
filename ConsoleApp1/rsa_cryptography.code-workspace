@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../rsa_cryptanalysis"
+		}
+	],
+	"settings": {
+		"dotnet.defaultSolution": "ConsoleApp1.sln"
+	}
+}

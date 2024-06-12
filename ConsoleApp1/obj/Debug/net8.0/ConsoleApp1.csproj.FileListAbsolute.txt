@@ -12,3 +12,4 @@ C:\Users\natna\Desktop\rsa_cryptography\ConsoleApp1\obj\Debug\net8.0\refint\Cons
 C:\Users\natna\Desktop\rsa_cryptography\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.pdb
 C:\Users\natna\Desktop\rsa_cryptography\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.genruntimeconfig.cache
 C:\Users\natna\Desktop\rsa_cryptography\ConsoleApp1\obj\Debug\net8.0\ref\ConsoleApp1.dll
+C:\Users\natna\Desktop\rsa_cryptography\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.sourcelink.json

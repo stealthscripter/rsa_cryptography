@@ -4,11 +4,14 @@ using System.Xml.Serialization;
 
 namespace ConsoleApp1 {
     public class RsaEnc{
+    
         private static RSACryptoServiceProvider csp = new RSACryptoServiceProvider(2048);
         private RSAParameters _privatekey;
+        
         private RSAParameters _publickey;
 
         public RsaEnc(){
+            
             _privatekey = csp.ExportParameters(true);
             _publickey = csp.ExportParameters(false);
         }
@@ -31,7 +34,7 @@ namespace ConsoleApp1 {
             var dataBytes = Convert.FromBase64String(cypherText);
             csp.ImportParameters(_privatekey);
             var plainText = csp.Decrypt(dataBytes, false);
-
+            
             return Encoding.Unicode.GetString(plainText);
         }
 
@@ -41,24 +44,24 @@ namespace ConsoleApp1 {
         static void Main(string[] args){
             RsaEnc rs = new();
             string cypher = String.Empty;
+        
             Console.WriteLine($"PublicKey: \n {rs.PublicKeyString()}\n");
             
             Console.WriteLine("Enter Your Text to Encrypt: \n");
 
             var text = Console.ReadLine();
             if(text != String.Empty){
-                cypher = rs.Encrypt(text);
+                cypher = rs.Encrypt(cypher);
+                
                 Console.WriteLine($"Cypher Text: {cypher} \n");
             }
 
             Console.WriteLine("Press enter to decrypt");
             Console.ReadLine();
-            var plainText = rs.Decrypt(cypher);
+            var plainText = rs.Decrypt(text);
             Console.WriteLine("Decrypt Text \n");
             Console.WriteLine(plainText);
             Console.ReadLine();
-
-
         }
     }
 }
